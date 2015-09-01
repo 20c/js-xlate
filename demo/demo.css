@@ -1,0 +1,13 @@
+body {
+  font: 12px arial, verdana;
+}
+
+div.container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+span[data-xlate] {
+  font-weight: bold;
+}

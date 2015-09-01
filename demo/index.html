@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>20c xlate demo</title>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="../src/twentyc.core.js" type="text/javascript"></script>
+  <script src="../src/twentyc.xlate.js" type="text/javascript"></script>
+  <script src="vocabulary.en.js" type="text/javascript"></script>
+  <script src="vocabulary.de.js" type="text/javascript"></script>
+  <script src="demo.js" type="text/javascript"></script>
+  <link href="demo.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+
+  <div class="container">
+
+  <h3>Switch language</h3>
+
+  <select rel="xlate-language"></select>
+
+  <h4>Text translation via ID</h4>
+  
+  <p>
+  In this paragraph only the phrase <span data-xlate="hello.world">Hello World</span> will be translated upon change of language. This is done by assigning it an id shared between all of it's translations.
+  </p>
+
+  <h4>Text translation via Content</h4>
+
+  <p>
+  In this paragraph the words <span data-xlate>dog</span> and <span data-xlate>cat</span> will be translated upon change of language. Again like the previous example, this is done by shared ids across all translations, with the exception that the word itself is used as the id.
+  </p>
+
+  <h4>Text translation from external source</h4>
+
+  <p data-xlate-src="get" data-xlate-url="paragraph.%lang%.html">
+  This entire paragraph will be translated uponchange of language. This is done by fetching the translated data from an external source (in this case a GET request to the server) when it is needed.
+  </p>
+
+  </div>
+  </body>
+</html>
